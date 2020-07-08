@@ -1,0 +1,23 @@
+---
+AccessModifierOffset:                           -4
+AlignAfterOpenBracket:                          DontAlign
+AlignEscapedNewlines:                           Right
+AlignTrailingComments:                          true
+AllowShortCaseLabelsOnASingleLine:              true
+AllowShortFunctionsOnASingleLine:               InlineOnly
+AllowShortIfStatementsOnASingleLine:            Never
+BasedOnStyle:                                   LLVM
+BreakBeforeBraces:                              Allman
+BreakConstructorInitializers:                   BeforeColon
+ColumnLimit:                                    0
+IndentWidth:                                    4
+Language:                                       Cpp
+CompactNamespaces:                              false
+NamespaceIndentation:                           All
+PointerAlignment:                               Left
+SortIncludes:                                   false
+SpacesInAngles:                                 false
+Standard:                                       Auto
+TabWidth:                                       4
+UseTab:                                         Always
+...
