@@ -159,7 +159,7 @@ namespace sg
 		{
 		}
 
-		inline float& operator[](int i) noexcept
+		float& operator[](int i) noexcept
 		{
 			assert(i >= 0 && i < 2 && "Out of range: Vector2::Operator[]\n");
 			return (&X)[i];
@@ -213,7 +213,7 @@ namespace sg
 			return Vector2(X * f, Y * f);
 		}
 
-		inline Vector2& operator+=(const Vector2& vector2) noexcept
+		Vector2& operator+=(const Vector2& vector2) noexcept
 		{
 			X += vector2.X;
 			Y += vector2.Y;
@@ -221,7 +221,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector2& operator-=(const Vector2& vector2) noexcept
+		Vector2& operator-=(const Vector2& vector2) noexcept
 		{
 			X -= vector2.X;
 			Y -= vector2.Y;
@@ -229,7 +229,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector2& operator+=(float f) noexcept
+		Vector2& operator+=(float f) noexcept
 		{
 			X += f;
 			Y += f;
@@ -237,7 +237,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector2& operator-=(float f) noexcept
+		Vector2& operator-=(float f) noexcept
 		{
 			X -= f;
 			Y -= f;
@@ -245,7 +245,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector2& operator*=(float f) noexcept
+		Vector2& operator*=(float f) noexcept
 		{
 			X *= f;
 			Y *= f;
@@ -253,7 +253,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector2& operator/=(float f) noexcept
+		Vector2& operator/=(float f) noexcept
 		{
 			f = 1.0f / f;
 			X *= f;
@@ -286,7 +286,7 @@ namespace sg
 		{
 		}
 
-		inline float& operator[](int i) noexcept
+		float& operator[](int i) noexcept
 		{
 			assert(i >= 0 && i < 3 && "Out of range: Vector3::Operator[]\n");
 			return (&X)[i];
@@ -342,7 +342,7 @@ namespace sg
 			return Vector3(X * f, Y * f, Z * f);
 		}
 
-		inline Vector3& operator+=(const Vector3& vector3) noexcept
+		Vector3& operator+=(const Vector3& vector3) noexcept
 		{
 			X += vector3.X;
 			Y += vector3.Y;
@@ -351,7 +351,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector3& operator-=(const Vector3& vector3) noexcept
+		Vector3& operator-=(const Vector3& vector3) noexcept
 		{
 			X -= vector3.X;
 			Y -= vector3.Y;
@@ -360,7 +360,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector3& operator+=(float f) noexcept
+		Vector3& operator+=(float f) noexcept
 		{
 			X += f;
 			Y += f;
@@ -369,7 +369,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector3& operator-=(float f) noexcept
+		Vector3& operator-=(float f) noexcept
 		{
 			X -= f;
 			Y -= f;
@@ -378,7 +378,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector3& operator*=(float f) noexcept
+		Vector3& operator*=(float f) noexcept
 		{
 			X *= f;
 			Y *= f;
@@ -387,7 +387,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector3& operator/=(float f) noexcept
+		Vector3& operator/=(float f) noexcept
 		{
 			f = 1.0f / f;
 
@@ -431,7 +431,7 @@ namespace sg
 			W = 0;
 		}
 
-		inline float& operator[](int i) noexcept
+		float& operator[](int i) noexcept
 		{
 			assert(i >= 0 && i < 4 && "Out of range: Vector4::Operator[]\n");
 			return (&X)[i];
@@ -489,7 +489,7 @@ namespace sg
 			return Vector4(X * f, Y * f, Z * f, W * f);
 		}
 
-		inline Vector4& operator+=(const Vector4& vector4) noexcept
+		Vector4& operator+=(const Vector4& vector4) noexcept
 		{
 			X += vector4.X;
 			Y += vector4.Y;
@@ -499,7 +499,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector4& operator-=(const Vector4& vector4) noexcept
+		Vector4& operator-=(const Vector4& vector4) noexcept
 		{
 			X -= vector4.X;
 			Y -= vector4.Y;
@@ -509,7 +509,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector4& operator+=(float f) noexcept
+		Vector4& operator+=(float f) noexcept
 		{
 			X += f;
 			Y += f;
@@ -519,7 +519,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector4& operator-=(float f) noexcept
+		Vector4& operator-=(float f) noexcept
 		{
 			X -= f;
 			Y -= f;
@@ -529,7 +529,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector4& operator*=(float f) noexcept
+		Vector4& operator*=(float f) noexcept
 		{
 			X *= f;
 			Y *= f;
@@ -539,7 +539,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Vector4& operator/=(float f) noexcept
+		Vector4& operator/=(float f) noexcept
 		{
 			f = 1.0f / f;
 			X *= f;
@@ -585,7 +585,7 @@ namespace sg
 			mMatrix[15] = f;
 		}
 
-		inline explicit Matrix(float* m) noexcept
+		explicit Matrix(float* m) noexcept
 		{
 			memcpy(mMatrix, m, sizeof(float) * 16);
 		}
@@ -613,7 +613,7 @@ namespace sg
 			mMatrix[15] = m15;
 		}
 
-		inline float& operator[](unsigned int m) noexcept
+		float& operator[](unsigned int m) noexcept
 		{
 			assert(m >= 0 && m < 16 && "Out of range: Matrix::Operator[]\n");
 			return mMatrix[m];
@@ -625,7 +625,7 @@ namespace sg
 			return mMatrix[m];
 		}
 
-		inline float& operator()(unsigned int col, unsigned int row) noexcept
+		float& operator()(unsigned int col, unsigned int row) noexcept
 		{
 			assert(col >= 0 && col < 4 && row >= 0 && row < 4 && "Out of range: Matrix::Operator[]\n");
 			return mMatrix[4 * col + row];
@@ -754,7 +754,7 @@ namespace sg
 			W = w;
 		}
 
-		inline float& operator[](int i) noexcept
+		float& operator[](int i) noexcept
 		{
 			assert(i >= 0 && i < 4 && "Out of range: Quaternion::Operator[]\n");
 			return (&X)[i];
@@ -817,7 +817,7 @@ namespace sg
 			return Quaternion(X - f, Y - f, Z - f, W - f);
 		}
 
-		inline Quaternion& operator+=(float f) noexcept
+		Quaternion& operator+=(float f) noexcept
 		{
 			X += f;
 			Y += f;
@@ -827,7 +827,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Quaternion& operator-=(float f) noexcept
+		Quaternion& operator-=(float f) noexcept
 		{
 			X -= f;
 			Y -= f;
@@ -837,7 +837,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Quaternion& operator*=(float f) noexcept
+		Quaternion& operator*=(float f) noexcept
 		{
 			X *= f;
 			Y *= f;
@@ -847,7 +847,7 @@ namespace sg
 			return *this;
 		}
 
-		inline Quaternion& operator/=(float f) noexcept
+		Quaternion& operator/=(float f) noexcept
 		{
 			X /= f;
 			Y /= f;
